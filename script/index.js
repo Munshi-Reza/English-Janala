@@ -108,9 +108,9 @@ const displayLevelWord = (words) =>{
 
     if(words.length == 0){
         wordContainer.innerHTML = `
-        <div class="text-center  col-span-full rounded-xl py-10 space-y-6">
+        <div class="text-center  col-span-full rounded-xl py- space-y-6">
         <img class= "mx-auto" src="./assets/alert-error.png" >
-            <p class="text-xl font-medium text-gray-400 font-bangla">আপনি এখনো কোন Lesson Select করেন ন</p>
+            <p class="text-xl  font-medium text-gray-400 font-bangla">আপনি এখনো কোন Lesson Select করেন ন</p>
             <h2 class="font-bold text-4xl">একটি Lesson Select করুন।</h2>
         </div>`;
         manageSpinner(false)
@@ -131,12 +131,12 @@ const displayLevelWord = (words) =>{
         const card = document.createElement("div");
         card.innerHTML = `
         <div class="bg-white rounded-xl shadow-sm text-center py-10 px-5 space-y-4 m-2">
-            <h2 class="font-bold text-2xl">${word.word ? word.word  : "শব্দ পাওয়া যায়নি"}</h2>
-            <p class="font-semibold ">Meaning /Pronounciation</p>
-            <div class="text-2xl font-medium font-bangla">"${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "Pronounciation পাওয়া যায়নি"}"</div>
+            <h2 class="font-bold text-xl sm:text-2xl">${word.word ? word.word  : "শব্দ পাওয়া যায়নি"}</h2>
+            <p class="text-[8px] sm:text-xl  font-semibold ">Meaning /Pronounciation</p>
+            <div class="text-[12px]  sm:text-2xl font-medium font-bangla">"${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "Pronounciation পাওয়া যায়নি"}"</div>
             <div class="flex justify-between items-center">
-                <button onclick="loadWordDetail(${word.id})" class="btn" bg-[#1A91FF10]  hover:bg-[#1A91FF80]"><i class="fa-solid fa-circle-info"></i></button>
-                <button onclick = "pronounceWord('${word.word}')" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
+                <button onclick="loadWordDetail(${word.id})" class="btn sm:w-15 sm:h-14 w-9 h-8" bg-[#1A91FF10]  hover:bg-[#1A91FF80]"><i class="fa-solid fa-circle-info"></i></button>
+                <button onclick = "pronounceWord('${word.word}')" class="sm:w-15 sm:h-14 w-9 h-8 btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
             </div>
         </div>
         `;
